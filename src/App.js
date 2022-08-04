@@ -76,8 +76,10 @@ function App() {
             <main className="App-main">
               <label htmlFor="text">ENTER_CODE_</label>
               <div className="inputContainer">
-                <input type="text" id="enterCode" value={code} placeholder="_" onChange={(e) => setCode(e.target.value)} />
-                <button onClick={() => handleClick()}>Submit</button>
+                <form id="codeEnteringForm">
+                  <input type="text" id="enterCode" value={code} placeholder="_" onChange={(e) => setCode(e.target.value)} />
+                  <button type="submit" onClick={() => handleClick()}>Submit</button>
+                </form>
               </div>
             </main>
 
