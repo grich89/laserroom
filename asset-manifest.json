@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/laserroom/static/css/main.1e457907.css",
+    "main.css": "/laserroom/static/css/main.14cb4eb8.css",
     "main.js": "/laserroom/static/js/main.384d3f49.js",
     "static/js/787.2f553d05.chunk.js": "/laserroom/static/js/787.2f553d05.chunk.js",
     "static/media/Scope_Armed.gif": "/laserroom/static/media/Scope_Armed.fc85d4471bf57aa1baa2.gif",
+    "static/media/pt-mono.bold.ttf": "/laserroom/static/media/pt-mono.bold.7b81dea5598c96419eab.ttf",
     "static/media/Scope_Disarmed.gif": "/laserroom/static/media/Scope_Disarmed.03ff1fd4ace8a6556632.gif",
     "static/media/Michroma.ttf": "/laserroom/static/media/Michroma.872a08da43365276322f.ttf",
     "static/media/Success_Screen.gif": "/laserroom/static/media/Success_Screen.c7256fb9e3dc7deaa1a0.gif",
@@ -11,12 +12,12 @@
     "static/media/Disarm_Box.gif": "/laserroom/static/media/Disarm_Box.d539594f731be09cdc8a.gif",
     "static/media/Arm_Box.gif": "/laserroom/static/media/Arm_Box.b83c395bed266e611885.gif",
     "index.html": "/laserroom/index.html",
-    "main.1e457907.css.map": "/laserroom/static/css/main.1e457907.css.map",
+    "main.14cb4eb8.css.map": "/laserroom/static/css/main.14cb4eb8.css.map",
     "main.384d3f49.js.map": "/laserroom/static/js/main.384d3f49.js.map",
     "787.2f553d05.chunk.js.map": "/laserroom/static/js/787.2f553d05.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1e457907.css",
+    "static/css/main.14cb4eb8.css",
     "static/js/main.384d3f49.js"
   ]
 }
