@@ -1,7 +1,25 @@
+@font-face {
+  font-family: "Michroma";
+  src: url("./fonts/Michroma.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "PT Mono";
+  /* webpackIgnore: true */
+  src: url("./fonts/pt-mono.bold.woff2") format("woff2"),
+    /* webpackIgnore: true */
+      url("./fonts/pt-mono.bold.woff") format("woff"),
+    /* webpackIgnore: true */
+      url("./fonts/pt-mono.bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 body {
   background-color: #000;
   color: #fff;
-  font-family: 'Courier New', sans-serif;
+  font-family: 'PT Mono', sans-serif;
   font-weight: 600;
   font-size: 24px;
 }
@@ -51,7 +69,23 @@ img {
 }
 
 .inputContainer {
+  margin-top: 10px;
   max-width: 1008px;
+  position: relative;
+}
+
+.inputContainer button {
+  background: transparent;
+  border: 0px;
+  color: white;
+  font-family: 'PT Mono', 'Courier New', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute; 
+  right: 0;
+  height: 100%;
+  padding-right: 2rem;
+  text-transform: uppercase;
 }
 
 #enterCode {
@@ -59,11 +93,10 @@ img {
   border: 2px solid white;
   border-radius: 10px;
   color: #fff;
-  font-family: "Courier New", sans-serif;
+  font-family: 'Michroma', sans-serif;
   font-size: 48px;
   font-weight: 600;
-  padding: 15px;
-  margin-top: 10px;
+  padding: 15px 130px 15px 15px;
   width: 100%;
 }
 
@@ -76,6 +109,7 @@ img {
   display: grid;
   grid-template-columns: 1.25fr 1fr 1.75fr;
   max-width: 1188px;
+  position: relative;
 }
 
 .App-footer * {
@@ -93,5 +127,19 @@ img {
   display: flex;
   padding: 4rem 0;
   justify-content: center;
-  height: 557px;
+  height: 572px;
+}
+
+.dots {
+  align-items: center;
+  display: flex;
+  height: 20px;
+  justify-content: space-between;
+  padding: 2rem 1.5rem 0;
+  width: 100%;
+}
+
+.dots span {
+  font-size: 20px;
+  line-height: 20px;
 }

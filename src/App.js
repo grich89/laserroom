@@ -6,34 +6,33 @@ import LaserBarsArmed from './images/Laser_Bars_Armed.gif';
 import DisarmBox from './images/Disarm_Box.gif';
 import DeniedScreen from './images/Denied_Screen.gif';
 import AcceptedScreen from './images/Success_Screen.gif';
-
 import ArmBox from './images/disarmed/Arm_Box.gif';
 import BarsDisarmed from './images/disarmed/Laser_Bars_Disarmed.gif';
 import ScopeDisarmed from './images/disarmed/Scope_Disarmed.gif';
+import Dots from './images/Dots.png';
 import './App.css';
 
 function App() {
-  const badCode = "Nope";
-  const goodCode = "Yep";
+  const goodCode = "XAAVZ5GAJDL";
 
   const [code, setCode] = useState("");
   const [denied, setDenied] = useState(false);
   const [accepted, setAccepted] = useState(false);
   const [unlocked, setUnlocked] = useState(false);
 
-  useEffect(() => {
-    if (code === badCode) {
+  const handleClick = () => {
+    if (code.toLowerCase() === goodCode.toLowerCase()) {
+      if (unlocked) {
+        setUnlocked(false);
+      } else {
+        setDenied(false);
+        setAccepted(true);
+      }
+    } else {
       setDenied(true);
-    } else {
-      setDenied(false);
-    }
-
-    if (code === goodCode) {
-      setAccepted(true);
-    } else {
       setAccepted(false);
     }
-  }, [code]);
+  }
 
   useEffect(() => {
     setTimeout(() => {
@@ -43,8 +42,10 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      setAccepted(false);
-      setUnlocked(true);
+      if (accepted) {
+        setAccepted(false);
+        setUnlocked(true);
+      }
     }, [5000])
   }, [accepted]);
 
@@ -73,9 +74,10 @@ function App() {
         ) : (
           <>
             <main className="App-main">
-              <label for="text">ENTER_CODE_</label>
+              <label htmlFor="text">ENTER_CODE_</label>
               <div className="inputContainer">
                 <input type="text" id="enterCode" value={code} placeholder="_" onChange={(e) => setCode(e.target.value)} />
+                <button onClick={() => handleClick()}>Submit</button>
               </div>
             </main>
 
@@ -105,6 +107,14 @@ function App() {
             </footer>
           </>
         )}
+
+
+        <div className="dots">
+          <img src={Dots} alt="Dots" />
+          {accepted && (
+            <span>SYSTEM_SHUTTING_DOWN...</span>
+          )}
+        </div>
       </div>
     </div>
   );
