@@ -5,16 +5,18 @@
 
 @font-face {
   font-family: "PT Mono";
-  /* webpackIgnore: true */
+  src: url("./fonts/pt-mono.bold.ttf") format("truetype");
+}
+
+/* @font-face {
+  font-family: "PT Mono";
   src: url("./fonts/pt-mono.bold.woff2") format("woff2"),
-    /* webpackIgnore: true */
       url("./fonts/pt-mono.bold.woff") format("woff"),
-    /* webpackIgnore: true */
       url("./fonts/pt-mono.bold.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-}
+} */
 
 body {
   background-color: #000;
